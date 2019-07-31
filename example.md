@@ -171,7 +171,7 @@ $('*')의 선택자, .css('color','red')메서드로 구성 됌.
 <script scr="jquery-1.10.2.js"></script>
 <script type ="text/javascript>
         $(document).ready(function(){
-                $('h1#아이디명').css('color','red');
+                $('h1#header1_아이디명').css('color','red');
         });
 </script>
 </head>
@@ -206,8 +206,38 @@ body를 기준으로 출력됌.
 
 ## Chain이란?
 JQuery의 메소드들은 자기 자신을 반환해야 한다는 규칙이 있다.
-이를 이용해서, 한번 선택한 대상에 대해서 연속적인 제어를 할수 있다.
+**이를 이용해서, 한번 선택한 대상에 대해서 연속적인 제어를 할 수 있다.
 
 > Chain의 장점  
 -코드의 간결화  
--인간의 언어와 유사해서, 사고의 자연스러운 과정과 일치함.
+-인간의 언어와 유사해서, 사고의 자연스러운 과정과 일치함.  
+> 1. JQuery의 경우  
+```html
+<html>
+        <body>
+            <a id ="tutorial" hrdf="http://jquery.com" target="_self">jQuery</a>
+            <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+                <script type="text/javascript">
+                    jQuery('#tutorial').attr('href', 'http://jquery.org').attr('target', '_blank').css('color', 'red');
+            </script>
+    </body>
+</html>
+```
+한번 선택한 대상에 대해서 연속적으로 제어(.attr|.css)를 한다. => Chain  
+
+
+> 2. JavaScript의 경우  
+```html
+<html>
+        <body>
+            <a id ="tutorial" hrdf="http://jquery.com" target="_self">jQuery</a>
+            <script type="text/javascript">
+                var tutorial=document.getElementById('tutorial');
+                tutorial.setAttribute('href', 'http://jquery.org');
+                tutorial.setAttribute('target', '_blank');
+                tutorial.style.color='red';
+            </script>
+    </body>
+</html>
+```
+한번 선택한 대상에 대해서 연속적으로 제어(setAttribute)를 한다. => Chain  
