@@ -28,13 +28,20 @@ JavaScript의 생산성을 향상시켜주는 JavaScript 라이브러리
 ## 기본 형식
 ```
 $(document).ready(function(){
-       //code here.(변수/함수/EventHandler...등등 작성)
+       //code here.(변수/함수/EventHandler...등등 작성)->JQuery의 내용
+       
+});
+```
+=단축형태
+```
+$(function(){
+       //code here.(변수/함수/EventHandler...등등 작성)->JQuery의 내용
        
 });
 ```
 
 
-예제
+Example
 ```
 <script>
 $(document).ready(function(){
@@ -46,8 +53,12 @@ $(document).ready(function(){
 });
 </script>
 ```
+$("selector").jQuery명령문|메서드로 내용이 구성됌
+
+
 [참조]
 ![selector](https://user-images.githubusercontent.com/42289304/62188045-2ea4b500-b3a6-11e9-9094-3fec6cd76c4b.png)
+
 
 ## JavaScript 와 JQuery 비교
 탭을 클릭시, 포커스를 변경하는 예제코드(2가지 version)
