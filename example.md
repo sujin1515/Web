@@ -46,6 +46,7 @@ $(document).ready(function(){
 });
 </script>
 ```
+![selector](https://user-images.githubusercontent.com/42289304/62188045-2ea4b500-b3a6-11e9-9094-3fec6cd76c4b.png)
 
 ## JavaScript 와 JQuery 비교
 탭을 클릭시, 포커스를 변경하는 예제코드(2가지 version)
@@ -228,6 +229,8 @@ body를 기준으로 출력됌.
 
 간단히 표현하자면 다음과 같다.
 @@
+
+<img src="https://user-images.githubusercontent.com/42289304/62188045-2ea4b500-b3a6-11e9-9094-3fec6cd76c4b.png" width="90%></img>
 
 
 
