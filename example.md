@@ -24,6 +24,29 @@ JavaScript의 생산성을 향상시켜주는 JavaScript 라이브러리
      </body>
 </html>
 ```
+
+## 기본 형식
+```
+$(document).ready(function(){
+       //code here.(변수/함수/EventHandler...등등 작성)
+       
+});
+```
+
+
+예제
+```
+<script>
+$(document).ready(function(){
+      $("button").click(function(){
+        $("h1").hide("slow");
+        $("h2").hide("fast");
+        $("img").slideUp();
+     }); 
+});
+</script>
+```
+
 ## JavaScript 와 JQuery 비교
 탭을 클릭시, 포커스를 변경하는 예제코드(2가지 version)
 ### 1. JavaScript
@@ -203,6 +226,10 @@ $('*')의 선택자, .css('color','red')메서드로 구성 됌.
 body를 기준으로 출력됌.  
 결과: red(Header1)->red(Header2)->blue(Header3)
 
+간단히 표현하자면 다음과 같다.
+@@
+
+
 
 ## Chain이란?
 JQuery의 메소드들은 자기 자신을 반환해야 한다는 규칙이 있다.
@@ -279,7 +306,23 @@ find대상 -> 메서드 적용 -> end -> find대상 -> 메서드 적용-> ...
 ## Event 란?
 시스템에서 일어나는 사건을 의미.  
 -JavaScript, JQuery에게 Event란 브라우져에서 일어나는 사건(ex)click, typing, page loading, mouse moving)  
--해당 Event가 발생시, 시스템은 작성해둔 로직(coding part)을 호출한다.  
+-해당 Event가 발생시, 시스템은 작성해둔 로직을 호출한다.  
+
+-> 즉, 사용자의 동작(Event)이 발행하면, 작성해둔 함수|EventHandler(로직)을 진행한다.
+
+예제
+```
+<script>
+$(document).ready(function(){
+      $("button").click(function(){
+        $("h1").hide("slow"); //hide 메서드
+        $("h2").hide("fast");//hide 메서드
+        $("img").slideUp();//slidUp 메서드(올라오는 효과)
+     }); 
+});
+</script>
+```
+
 
 
 
