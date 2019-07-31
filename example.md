@@ -107,20 +107,26 @@ JavaScript의 생산성을 향상시켜주는 JavaScript 라이브러리
 javascript의 이벤트 핸들러사용의 번거로움을 jquery의 경우 간편하게 표현가능하다.
 
 
-## [참고 정보]
-### $와 JQuery의 사용법 비교
-> 1.function안에서 $(엘리먼트)를 사용하는 경우
+## Wrapper[래퍼]란?
+'element오브젝트_body |css 선택자'를 감싸는 jQuery( ... )을 의미
+### 래퍼의 안전한 사용을 위해서
+$(엘리먼트)와 JQuery(element)는 같은 의미지만, $를 사용하는 다른 라이브러리들의 충돌을 막기위해서 다음과 같이 JQuery와 $를 작성한다.
+> 1.JQuery(element)를 사용하는 경우
 ```
-$('#navigation li').on('click', function(){  //이벤트 핸들러
-          $('#navigation li').removeClass('selected');
-          ...
-      }))
+ <script type="text/javascript">
+      jQuery('body').html('hello');
+  </script>
 ```
- > 2.JQuery(element)를 사용하는 경우
- ```
-      jQuery('#navigation li').removeClass('selected');
+> 2.function안에서 $(엘리먼트)를 사용하는 경우
 ```
-### script의 위치
+<script type="text/javascript">
+(function($){
+    $('body').html('hello');
+      })(jQuery)
+  </script>
+```
+
+### Tip. script의 위치
 > 1.<head>에 위치한 경우
 간단한 설정, JavaScript 라이브러리 import시 사용.  
 > 2.<body>에 위치한 경우
