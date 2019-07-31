@@ -12,7 +12,7 @@ JavaScript의 생산성을 향상시켜주는 JavaScript *라이브러리
 
 >2.구글의 JavaScript 라이브러리를 사용하는 경우  
 >1.http://code.google.com/intl/ko-KR/apis/libraries/devguide.html#jquery  
->```html
+```html
 <html>
     <body>
         <div class="Welcome"></div>
