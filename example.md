@@ -225,6 +225,7 @@ JQuery의 메소드들은 자기 자신을 반환해야 한다는 규칙이 있�
 ```
 한번 선택한 대상에 대해서 연속적으로 제어(.attr/.css)를 한다. => Chain  
 
+대상.메서드();
 
 > 2. JavaScript의 경우  
 ```html
@@ -244,14 +245,16 @@ JQuery의 메소드들은 자기 자신을 반환해야 한다는 규칙이 있�
 
 
 ### Traversing(탐색)
-:chain 의매 대상을 바꿰서 체인을 계속 연장시킬 수 있는 방법
+:chain 의 대상을 바꿔서 체인을 계속 연장시킬 수 있는 방법  
 
-```
+
+예제) JQuery의 경우 
+```html
 <script type="text/javascript">
-                    jQuery('#tutorial').css('color', 'red');
-            </script>
+                    jQuery('#tutorial').find('.foo').css('color', 'red').end().find('.bar')..css('color', 'blue');
+ </script>
 ```
-jQuery('li).메서드.메서드
+find대상 -> 메서드 적용 -> end -> find대상 -> 메서드 적용-> ... 
 
 #### 메서드
 
@@ -271,6 +274,12 @@ jQuery('li).메서드.메서드
 |parentsUntil()|조건이 참이 될 때까지 부모 노드를 찾는다.|
 |prevUntil()|이전에 위치한 노드를 조건에 맞을 때까지 찾는다.|
 |siblings()|형제 노드들을 모두 찾는다.|
+
+
+## Event 란?
+시스템에서 일어나는 사건을 의미.  
+-JavaScript, JQuery에게 Event란 브라우져에서 일어나는 사건(ex)click, typing, page loading, mouse moving)  
+-해당 Event가 발생시, 시스템은 작성해둔 로직(coding part)을 호출한다.  
 
 
 
