@@ -27,7 +27,7 @@ JavaScript의 생산성을 향상시켜주는 JavaScript 라이브러리
 ## JavaScript 와 JQuery 비교
 탭을 클릭시, 포커스를 변경하는 예제코드(2가지 version)
 ### 1. JavaScript
-```js
+```javascript
 <html>
   <head>
   <script type="text/javascript">
