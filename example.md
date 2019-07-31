@@ -19,7 +19,7 @@ JavaScript의 생산성을 향상시켜주는 JavaScript *라이브러리
         <div class="Welcome"></div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
         <script type="text/javascript"> 
-              &('.welcome').html('hello world!').css('background-color', 'yellow');
+              $('.welcome').html('hello world!').css('background-color', 'yellow');
          </script>
      </body>
 </html>
