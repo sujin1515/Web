@@ -109,6 +109,8 @@ javascript의 이벤트 핸들러사용의 번거로움을 jquery의 경우 간�
 
 ## Wrapper[래퍼]란?
 'element오브젝트_body |css 선택자'를 감싸는 jQuery( ... )을 의미
+
+
 ### 래퍼의 안전한 사용을 위해서
 $(엘리먼트)와 JQuery(element)는 같은 의미지만, $를 사용하는 다른 라이브러리들의 충돌을 막기위해서 다음과 같이 JQuery와 $를 작성한다.
 > 1.JQuery(element)를 사용하는 경우
@@ -127,7 +129,7 @@ $(엘리먼트)와 JQuery(element)는 같은 의미지만, $를 사용하는 다
 ```
 
 ### Tip. script의 위치
-> 1.<head>에 위치한 경우
+> 1.head에 위치한 경우  
 간단한 설정, JavaScript 라이브러리 import시 사용.  
-> 2.<body>에 위치한 경우
+> 2.body에 위치한 경우  
 대부분의 경우, script는 body내부에 위치함.
