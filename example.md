@@ -200,5 +200,5 @@ $('*')의 선택자, .css('color','red')메서드로 구성 됌.
     <h1 class="item">Header3</h1>
 </body>      
 ```
-body를 기준으로 출력됌
+body를 기준으로 출력됌.  
 결과: red(Header1)->red(Header2)->blue(Header3)
