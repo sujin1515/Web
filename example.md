@@ -133,3 +133,72 @@ $(엘리먼트)와 JQuery(element)는 같은 의미지만, $를 사용하는 다
 간단한 설정, JavaScript 라이브러리 import시 사용.  
 > 2.body에 위치한 경우  
 대부분의 경우, script는 body내부에 위치함.
+
+
+## Selector(선택자) 란?
+JQuery wrapper 안에는 CSS 선택자가 위치 할수 있는데, 이를 통해서 엘리먼트를 빠르고 정확하게 지정할 수 있다.
+
+> 1. Wildcard Selector(전체 선택자) _ *
+:HTML 페이지에 있는 모든 문서 객체를 선택.
+```
+<script scr="jquery-1.10.2.js"></script>
+<script type ="text/javascript>
+        $(document).ready(function(){
+                $('*').css('color','red');
+        });
+</script>
+```
+$('*')의 선택자, .css('color','red')메서드로 구성 됌.
+
+
+> 2. Tag Selector _ 태그명
+:특정한 태그를 선택.
+```
+<script scr="jquery-1.10.2.js"></script>
+<script type ="text/javascript>
+        $(document).ready(function(){
+                $('h1').css('color','red');
+        });
+</script>
+```
+
+
+> 3. Id Selector _ #아이디명
+:특정한 id속성이 있는 문서 객체를 선택.
+```
+<head>
+...
+<script scr="jquery-1.10.2.js"></script>
+<script type ="text/javascript>
+        $(document).ready(function(){
+                $('h1#아이디명').css('color','red');
+        });
+</script>
+</head>
+<body>
+    <h1 id="header1">Header</h1>
+</body>      
+```
+
+
+> 4. Class Selector _ .클래스명
+:특정한 class속성이 있는 문서 객체를 선택.
+```
+<head>
+...
+<script scr="jquery-1.10.2.js"></script>
+<script type ="text/javascript>
+        $(document).ready(function(){
+                $('h1.item').css('color','red');
+                $('.item1, .item2').css('color','blue');
+        });
+</script>
+</head>
+<body> 
+    <h1 class="item1">Header1</h1>
+    <h1 class="item1">Header2</h1>
+    <h1 class="item">Header3</h1>
+</body>      
+```
+body를 기준으로 출력됌
+결과: red(Header1)->red(Header2)->blue(Header3)
