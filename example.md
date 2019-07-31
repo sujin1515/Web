@@ -122,6 +122,6 @@ $('#navigation li').on('click', function(){  //이벤트 핸들러
 ```
 ### script의 위치
 > 1.<head>에 위치한 경우
-간단한 설정, JavaScript 라이브러리 import시 사용.
+간단한 설정, JavaScript 라이브러리 import시 사용.  
 > 2.<body>에 위치한 경우
 대부분의 경우, script는 body내부에 위치함.
