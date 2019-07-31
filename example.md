@@ -24,3 +24,86 @@ JavaScript의 생산성을 향상시켜주는 JavaScript 라이브러리
      </body>
 </html>
 ```
+## JavaScript 와 JQuery 비교
+탭을 클릭시, 포커스를 변경하는 예제코드(2가지 version)
+### 1. JavaScript
+```js
+<html>
+  <head>
+  <script type="text/javascript">
+    function addEvent(target, eventType, eventHandler, userCapture){
+    if(target.addEventListener){
+      target.addEventListener(eventType, eventHandler, userCapture? userCapture:false);
+      
+    }else if(target.attachEvent){
+      var r =target.attachEvent("on"+eventType, eventHandler);
+    }
+  }
+
+  function clickHandler(event){
+    var nav =document.getElementById('navigation');
+    for(var i=0; i<nav.childNodes.length;i++)
+    {
+      var child=nav.childNodes[i]; 
+      if(child.nodeType==3)
+        continue;
+      child.className ='';
+    }
+    event.target.className ='selected';
+  }
+  addEvent(window, 'load', function(eventObj){
+      var nav =document.getElementById('navigation');
+      for(var i=0; i<nav.childNodes.length;i++){
+        var child=nav.childNodes[i];
+        if(child.nodeType ==3)
+          continue;
+       addEvent(child,'click',clickHAndler);
+      }
+  })
+  </script>
+  </head>
+
+//동일구간
+  <body>
+       <ul id="navigation">
+           <li>HTML</li>
+           <li>CSS</li>
+           <li>javascript</li>
+           <li class="selected">jQuery</li>
+           <li>PHP</li>
+           <li>mysql</li>
+       </ul>
+   </body>
+</html>
+```  
+
+
+### 2. JQuery  
+```html
+<html>
+  <head> //에 들어가는 js이 경우, 간단항 설정&js 라이브러리 import시 사용
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"><script>
+    <script type="text/javascript">
+      $('#navigation li').on('click', function(){  //이벤트 핸들러
+          $('#navigation li').removeClass('selected');
+          $(this).addClass('selected');
+      })//1.function안에서! 사용하는 $(엘리먼트)
+      //2.jQuery(element)를 사용하는경우
+      //jQuery('#navigation li').removeClass('selected');
+
+//javascript의 이벤트 핸들러를 jquery로 간편하게 표현가능
+      </script>
+      </head>
+      <body>   //재부분의 경우, js는 body내부에 위치한다.
+        <ul id="navigation">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>javascript</li>
+            <li class="selected">jQuery</li>
+            <li>PHP</li>
+            <li>mysql</li>
+        </ul>
+    </body>
+</html>
+```
+
