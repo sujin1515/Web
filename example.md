@@ -509,4 +509,13 @@ ex) click이벤트 핸들러 안에 animate함수를 연동해서 애니메이�
         <div id="block">
             Hello!
         </div>
-        <script>
+        <script> 
+            $("#go").click(function{
+            
+            
+            
+        </script>
+        
+    </body>
+</html>
+```
