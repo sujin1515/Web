@@ -385,24 +385,71 @@ $function(){
 
 | Element제어 | 해당 요소|
 :----: |----
-자식으로 삽입|.append() .appendTo(), .html(), .prepend(), .prependTo(), .text()|
-형제로 삽입| .after(), .before(), .insertAfter(), .insertBefore()|
-부모로 감싸기|.unwrap(), .wrap(), .wrapAll(), .wrapInner()|
-삭제| .detach(), .empty(), .remove(), .unwrap()|
-치환| .replaceAll(), replaceWith()|
-클래스| .addClass(), .hasClass(), .removeClass(), .toggleClass()|
-속성제어| .attr(), .prop(), .removeAttr(), .remoceProp(), .val()|
+자식으로 삽입|.append() .appendTo() .html() .prepend() .prependTo() .text()|
+형제로 삽입| .after() .before() .insertAfter() .insertBefore()|
+부모로 감싸기|.unwrap() .wrap() .wrapAll() .wrapInner()|
+삭제| .detach() .empty() .remove() .unwrap()|
+치환| .replaceAll() replaceWith()|
+클래스| .addClass() .hasClass() .removeClass() .toggleClass()|
+속성제어| .attr() .prop() .removeAttr() .remoceProp() .val()|
 
 
 .attr(): 선택된 요소집합의 첫번째요소에 대해 **속성값 가져오거나 or 선택된 모든 요소에 대해서 속성을 설정.**   
 .val() : 폼 요소들에 대해서 일치하는/ 요소집합의 첫번째요소에 대해 **현재값 가져오거나 or 일치하는 모든 요소에 대해서 값을 설정.**  
 
+## Form 이란?  
+-서버로 데이터를 전송하기 위한 수단  
+- JQuery는 form을 제어하는데 필요한 이벤트와 메소드 제공
 
-
-
-                                                                                           
-
-
-
-
-
+예제 [.focuse() .blur() .change() .select()]
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+                <style>
+                    span{
+                    
+                    }
+               </style>
+               <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    <body>
+        <p>
+            <input type="text"/>
+            <span></span>
+        </p>
+        <script>
+            $("input").focuse(function (){
+                $(this).next("span").html('focus');
+            }).blur(function (){
+                $(this).next("span").html('blur');
+            }).change(function() {
+                 alert('change!' +$(e.target).val();
+            }).select(function (){
+                $(this).next("span").html('select');
+            });
+        </script>
+    </body>
+</html>
+```
+예제 [.submit() .val()]
+```html
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <style>
+            p{
+                margin:0;
+                color:blue;
+            }
+            div, p{
+                margin-left:10px;
+            }
+            span{
+                color:red;
+            }
+        </style>
+        
+</html>
+```
