@@ -431,12 +431,14 @@ $function(){
         </script>
     </body>
 </html>
-```
+```  
+
+
 예제 [.submit() .val()]
 ```html
 <!DOCTYPE html>
 <html>
-    
+
     <head>
         <style>
             p{
@@ -450,6 +452,35 @@ $function(){
                 color:red;
             }
         </style>
-        
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+
+    <body>
+        <p>
+            Type 'correct' to validate.
+        </p>
+        <form acton ="javadscript:alert('success!');">
+            <div>
+                <input type ="text"/>
+                <input type ="submit"/>
+            </div>
+        </form>
+        <span></spane>
+
+        <script>
+            $("form").submit(function(){
+                if($("input:first").val() =="correct"){
+                    $("span").text("Validated..").show();
+                    return true;
+                }
+                $("span").text("Not valid!").show().fadeout(1000);
+                    return false;
+            });
+        </script>
+    </body>
 </html>
 ```
+form영역 ->form 태그(element)대상에 submit(명령어)이벤트 발생시,   
+if 입력이 correct문자열과 동일하다면, span태그 영역에 Vaildated text show하기(event Handler내용) &return true;  
+if문에 걸리지 않는다면, span태그 영역에 Not valid! text show->fadeout효과(event Handler내용) &return false;  
+
