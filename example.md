@@ -380,7 +380,25 @@ $function(){
 </html>
 ```
 주의사항)''싱글과 ""더블 구분하기                     
-                                                                                                                 
+## Element제어
+
+
+| Element제어 | 해당 요소|
+:----: |----
+자식으로 삽입|.append() .appendTo(), .html(), .prepend(), .prependTo(), .text()|
+형제로 삽입| .after(), .before(), .insertAfter(), .insertBefore()|
+부모로 감싸기|.unwrap(), .wrap(), .wrapAll(), .wrapInner()|
+삭제| .detach(), .empty(), .remove(), .unwrap()|
+치환| .replaceAll(), replaceWith()|
+클래스| .addClass(), .hasClass(), .removeClass(), .toggleClass()|
+속성제어| .attr(), .prop(), .removeAttr(), .remoceProp(), .val()|
+
+
+
+
+
+
+                                                                                           
 
 
 
