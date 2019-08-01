@@ -484,3 +484,29 @@ form영역 ->form 태그(element)대상에 submit(명령어)이벤트 발생시,
 if 입력이 correct문자열과 동일하다면, span태그 영역에 Vaildated text show하기(event Handler내용) &return true;  
 if문에 걸리지 않는다면, span태그 영역에 Not valid! text show->fadeout효과(event Handler내용) &return false;  
 
+
+## 애니메이션 이란?
+-JavaScript와 CSS를 이용해서 HTML elemnent에 동적일 효과를 줌.  
+-JQuery는 효과 메소드를 호출해서 효과를 줌.  
+ex) click이벤트 핸들러 안에 animate함수를 연동해서 애니메이션 효과를 줌.  
+
+```html
+<html>
+    <head>
+        <style>
+            div{
+                background-color:#bca;
+                width:100px;
+                border:1px solid green;
+            }
+        </style>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    <body>
+        <button id="go">
+            &raquo; Run
+        </button>
+        <div id="block">
+            Hello!
+        </div>
+        <script>
