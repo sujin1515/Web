@@ -550,12 +550,42 @@ JavaScript를 이용해서 **비동기식**으로 서버와 통신하는 방식,
 </script>
 ```
 
-예제. 웹페이지
+Example. 웹페이지
 ```html
 <!DOCTYPE html>
 <html>
        <head>
             <script src="http://code.jquery.com/jquery-latest.js"></script>
        </head>
-    
+        <body>
+            <div id ="result"></div>
+            <input type="text" id="img"/>
+            <input type ="text" value="get result" id="getResult">
+            <script>
+                $('#getResult').click(function(){
+                    $('#result).html('');
+                    $.ajax({
+                        url:'http://opentutorials.org/example/jquery/example.jquery.ajax.php',
+                        data:'json',
+                        type:'POST',
+                        data:{'msg':$('#msg').val()},
+                        success:function(result){
+                            if(result['result'] ==true){
+                                $('#result').html(result['msg']);
+                                }
+                            }
+                   });
+               })
+            </script>
+    </body>
+</html>
+```
+
+
+Example. server 로직    
  ```
+ <?
+    echo json_encode(array('result' => true, 'msg'=>$_REQUEST['msg']));
+ ?>
+ ```
+
