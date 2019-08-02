@@ -529,9 +529,10 @@ run버튼 click이벤트가 발생시, block(element)대상에 .animate(명령�
 
 ## Ajax란?
 (Asynchronous JavaScript and Xml)
-JavaScript를 이용해서 **비동기식**으로 서버와 통신하는 방식, 이때 XML을 이용.  
-[최근에는 XML대신에 JSON을 많이 이용]
-* 비동기식: 여러가지일이 동시적으로 처리될수 있는 것 의미. 서버와 통신하는 동안 다른 작업을 할 수 있다는 의미.
+JavaScript를 이용해서 **비동기식**으로 서버와 통신하는 방식, 이때 XML을 이용.   
+[최근에는 XML대신에 JSON을 많이 이용]  
+* 비동기식: 여러가지일이 동시적으로 처리될수 있는 것 의미. 서버와 통신하는 동안 다른 작업을 할 수 있다는 의미.  
+즉, 화면전체를 갱신하지 않고 **페이지의 일부만(json, xml형태의 필요한 data) 갱신하고도** 동일한 화면표시효과를 나타낼 수 있음.  
 
 
 ### Ajax 기본형식
@@ -539,7 +540,7 @@ JavaScript를 이용해서 **비동기식**으로 서버와 통신하는 방식,
 <script>
     ...
     $.ajax({
-        url:'데이터를 전송할 URL',
+        url:'호출할 URL',
         dataType:'서버가 리턴하는 데이터 타입 ex)xml, json, script, html',
         type:'서버로 전송하는 데이터의 타입 ex)GET, POST',
         data:{서버에 전송 할 데이터, key/vlaue 형식의 객체},
@@ -549,6 +550,15 @@ JavaScript를 이용해서 **비동기식**으로 서버와 통신하는 방식,
     });
 </script>
 ```
+즉, brower --------------------------->서버  
+      보내는 정보[data],전송타입[type]  
+      
+      
+    brower<--------------------------- 서버   
+     [url]페이지로 이동해서 데이터를 처리하고, 받는데이터(필요정보for. 일부갱신)타입[dataType]    
+     -다시 현페이지(brower)에 돌아와서, 페이지 일부 만을 갱신함.   
+     ->이러한 비동기 통신이 성공한경우, [success]에 기재된 eventHandler를 실행함.      
+       
 
 Example. 웹페이지
 ```html
@@ -588,4 +598,7 @@ Example. server 로직
     echo json_encode(array('result' => true, 'msg'=>$_REQUEST['msg']));
  ?>
  ```
-
+ 
+주의사항) 현재 url에 파일이 없으므로 해당예제는 작동하지 않을 것이다. 하지만 해당예제를 통해 Ajax의 작성방식을 익혀두자  
+ 
+ 
