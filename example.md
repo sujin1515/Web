@@ -525,3 +525,29 @@ ex) click이벤트 핸들러 안에 animate함수를 연동해서 애니메이�
 </html>
 ```
 run버튼 click이벤트가 발생시, block(element)대상에 .animate(명령어)를 실행한다.[click eventHandler 처리]
+
+
+## Ajax란?
+(Asynchronous JavaScript and Xml)
+JavaScript를 이용해서 **비동기식**으로 서버와 통신하는 방식, 이때 XML을 이용.  
+[최근에는 XML대신에 JSON을 많이 이용]
+* 비동기식: 여러가지일이 동시적으로 처리될수 있는 것 의미. 서버와 통신하는 동안 다른 작업을 할 수 있다는 의미.
+
+
+### Ajax 기본형식
+```html
+<script>
+    ...
+    $.ajax({
+        url:'데이터를 전송할 URL',
+        dataType:'서버가 리턴하는 데이터 타입 ex)xml, json, script, html',
+        type:'서버로 전송하는 데이터의 타입 ex)GET, POST',
+        data:{서버에 전송 할 데이터, key/vlaue 형식의 객체},
+        success:function(result){
+            ajax통신을 성공했을때, 호출될 eventHandler
+        }
+    });
+</script>
+```
+    
+
