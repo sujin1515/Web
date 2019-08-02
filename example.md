@@ -549,5 +549,13 @@ JavaScript를 이용해서 **비동기식**으로 서버와 통신하는 방식,
     });
 </script>
 ```
-    
 
+예제. 웹페이지
+```html
+<!DOCTYPE html>
+<html>
+       <head>
+            <script src="http://code.jquery.com/jquery-latest.js"></script>
+       </head>
+    
+ ```
