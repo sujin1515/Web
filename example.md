@@ -491,6 +491,7 @@ if문에 걸리지 않는다면, span태그 영역에 Not valid! text show->fade
 ex) click이벤트 핸들러 안에 animate함수를 연동해서 애니메이션 효과를 줌.  
 
 ```html
+<!DOCTYPE html>
 <html>
     <head>
         <style>
@@ -503,19 +504,24 @@ ex) click이벤트 핸들러 안에 animate함수를 연동해서 애니메이�
         <script src="http://code.jquery.com/jquery-latest.js"></script>
     </head>
     <body>
-        <button id="go">
+        <button id="run">
             &raquo; Run
         </button>
         <div id="block">
             Hello!
         </div>
-        <script> 
-            $("#go").click(function{
-            
-            
-            
+        <script>
+            $("#run").click(function() {
+                $("#block").animate({
+                width:"300px",
+                opacity:0.4,
+                marginLeft:"50px",
+                fontSize:"30px",
+                borderWidth:"10px"
+            }, 3000);
+       });
         </script>
-        
     </body>
 </html>
 ```
+run버튼 click이벤트가 발생시, block(element)대상에 .animate(명령어)를 실행한다.[click eventHandler 처리]
