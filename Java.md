@@ -176,8 +176,8 @@ public class ThreadEX implements Runnable{
 
 
 ## Eeception처리 란?
-Exception(예외): 사용자의 잘못된 조작/개발자의 잘못된 코딩에 인해 발생하는 오류.(ex)잘못된 입력, 잘못된 코딩)  
-Error(에러): HW의 오작동/고장으로 인해 응용프로그램에 이상이 생겼거나 JVM실행에 문제가 생겼을 경우 발생하는것.
+Exception(예외): 사용자의 잘못된 조작/개발자의 잘못된 코딩에 인해 발생하는 오류.(ex)잘못된 입력, 잘못된 코딩)    
+Error(에러): HW의 오작동/고장으로 인해 응용프로그램에 이상이 생겼거나 JVM실행에 문제가 생겼을 경우 발생하는것.  
 
 
 ### <예외처리 방법>
@@ -193,8 +193,8 @@ try{
       //이곳에 추가로 Try catch를 두기도함.
 }
 ```
-=>이 구조를 TCFTC 라고 칭함.(try, catch, finally(try, catch))
-
+=>이 구조를 TCFTC 라고 칭함.(try, catch, finally(try, catch))  
+![exception](https://user-images.githubusercontent.com/42289304/62509924-1fab8000-b848-11e9-9805-de9b25ca722c.png)
 
 
 2. throws
@@ -203,9 +203,9 @@ public void compileE() throws IOException{
       //예외가 발생하는 함수에 throws 처리[즉, 예외를 던지기=떠넘기기]
 }
 ```
+![throws](https://user-images.githubusercontent.com/42289304/62509919-1c17f900-b848-11e9-9952-68ff49087cc7.png)  
 
-
-TIP. 예외를 떠넘기는 threow 보다는 -> 예외가 발생시, 수행할 행동을 코딩해두는 **try catch 구조가 더 좋은 코딩방법이다.**
+TIP. 예외를 떠넘기는 threow 보다는 -> 예외가 발생시, 수행할 행동을 코딩해두는 **try catch 구조가 더 좋은 코딩방법이다.**  
 
 
 
