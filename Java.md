@@ -75,7 +75,7 @@ public class SingleThreadEx extends Thread{
     }
 }
 ```
-###2. Runnable 인터페이스 상속(많이 사용되는 방법)
+### 2. Runnable 인터페이스 상속(많이 사용되는 방법)
 Example.
 ```java
 public class SingleThreadEx2 implements Runnable{
