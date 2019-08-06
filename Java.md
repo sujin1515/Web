@@ -1,6 +1,9 @@
 ## Stream란?
 collection/배열 등 저장요소를 참조하여 람다식을 적용하여 반복적으로 처리할 수 있도록 하는 기능.  
-**사용법: Collections같은 객체 집합.스트림생성().중개연산().최종연산();**
+
+
+### <사용법>
+**Collections같은 객체 집합.스트림생성().중개연산().최종연산();**
 
 
 ### Example 1
@@ -40,7 +43,7 @@ FileInputStream input = null;   //생성된 파일내용 일기
 하나의 프로세스 내부에서 독립적으로 실행되는 작업단위.  
 **main안에 실행문들 하나의 스레드**(그동안 만들어온 class들은 main하나의 스레드에 의해 실행됌.)
 
-## <Thread 생성 방법>
+### <Thread 생성 방법>
 ### 1. Thread 클래스 상속
 Example.
 ```java
@@ -169,3 +172,18 @@ public class ThreadEX implements Runnable{
 
 ## [참조] thread의 생명주기  
 ![thread주기](https://user-images.githubusercontent.com/42289304/62506629-66937880-b83c-11e9-804e-3ee8c5368c14.png)
+
+
+
+## Eeception처리 란?
+Exception(예외): 사용자의 잘못된 조작/개발자의 잘못된 코딩에 인해 발생하는 오류.(ex)잘못된 입력, 잘못된 코딩)  
+Error(에러): HW의 오작동/고장으로 인해 응용프로그램에 이상이 생겼거나 JVM실행에 문제가 생겼을 경우 발생하는것.
+
+
+### <예외처리 방법>
+1. Try Catch
+2. throws
+
+
+
+
