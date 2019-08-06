@@ -1,7 +1,8 @@
 ## Stream란?
-:컬랙션/배열 등 저장요소를 참조하여 람다식을 적용하여 반복적으로 처리할 수 있도록 하는 기능
+collection/배열 등 저장요소를 참조하여 람다식을 적용하여 반복적으로 처리할 수 있도록 하는 기능.  
 **사용법: Collections같은 객체 집합.스트림생성().중개연산().최종연산();**
-  
+
+
 ### Example 1
 ```java
 List <string names =Arrays.asList("jeong", "pro", "jdk", "java");
