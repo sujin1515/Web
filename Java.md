@@ -1,15 +1,15 @@
-##Stream이란?
-컬랙션/배열 등 저장요소를 참조하여 람다식을 적용하여 반복적으로 처리할 수 있도록 하는 기능
+## Stream란?
+:컬랙션/배열 등 저장요소를 참조하여 람다식을 적용하여 반복적으로 처리할 수 있도록 하는 기능
 **사용법: Collections같은 객체 집합.스트림생성().중개연산().최종연산();**
   
-###Example 1
+### Example 1
 ```java
 List <string names =Arrays.asList("jeong", "pro", "jdk", "java");
 Stream <String> a =names.stream().filter(x-> x.contains("o");
 ```
 결과: "jeong", "pro"만 담긴 a 스트림이 반환된다.
 
-###Example 2
+### Example 2
 ```java
 List <string names =Arrays.asList("jeong", "pro", "jdk", "java");
 names.parallerStream().map((x) -> {return x.concat("s");}).forEach(x -> System.out.println(x));
@@ -18,7 +18,7 @@ names.parallerStream().map((x) -> {return x.concat("s");}).forEach(x -> System.o
  
 
 
-###파일 I/O Stream 사용법 [주의!!expextion 다루기_try]
+### 파일 I/O Stream 사용법 
 ```java
 FileOutputStream fileout = null; //생성
       try{
@@ -32,3 +32,4 @@ FileInputStream input = null;   //생성된 파일내용 일기
             input = new FileInputStream(file);
             }
 ```
+*주의사항 ) exception 다루기 =>try ,catch사용하기
