@@ -38,7 +38,7 @@ FileInputStream input = null;   //생성된 파일내용 일기
 
 ## Thread란?
 하나의 프로세스 내부에서 독립적으로 실행되는 작업단위.  
-**main안에 실행문들 하나의 스레드**(그동안 만들어온 class들은 main하나의 스레드에 의해 실행되옴.)
+**main안에 실행문들 하나의 스레드**(그동안 만들어온 class들은 main하나의 스레드에 의해 실행됌.)
 
 ## <Thread 생성 방법>
 ### 1. Thread 클래스 상속
