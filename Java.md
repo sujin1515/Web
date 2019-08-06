@@ -117,7 +117,7 @@ public class SingleThreadEx2 implements Runnable{
 }
 ```
 
-main에서 생성한 스레스들을 사용[*멀티 스레딩]
+## main에서 생성한 스레스들을 사용[*멀티 스레딩]
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -157,10 +157,14 @@ public class ThreadEX implements Runnable{
 }
 ```
 
-*멀티스레딩 : **여러 스레드를 동시에 실행시키는** 응용프로그램을 작성하는 기법.
+### *멀티스레딩 : **여러 스레드를 동시에 실행시키는** 응용프로그램을 작성하는 기법.
 <장점>
 1. 메모리공유로 인한 시스템 자원 소모를 줄임.
 2. 동시에 두가지 이상의 활동 가능.
 <단점>
 1. 서로 자원을 소모하다 충동의 가능성 존재 =>**synchronized(동기화)된 공유객체 생성시, slove!!**
 2. 코딩이 난해해져 버그 생성활률 높아짐.
+
+
+## [참조] thread의 생명주기  
+![thread주기](https://user-images.githubusercontent.com/42289304/62506629-66937880-b83c-11e9-804e-3ee8c5368c14.png)
