@@ -41,7 +41,7 @@ FileInputStream input = null;   //생성된 파일내용 일기
 **main안에 실행문들 하나의 스레드**(그동안 만들어온 class들은 main하나의 스레드에 의해 실행되옴.)
 
 ## <Thread 생성 방법>
-1. Thread 클래스 상속
+### 1. Thread 클래스 상속
 Example.
 ```java
 public class SingleThreadEx extends Thread{
@@ -75,8 +75,8 @@ public class SingleThreadEx extends Thread{
     }
 }
 ```
-
-2. Runnable 인터페이스 상속(많이 사용되는 방법)
+###2. Runnable 인터페이스 상속(많이 사용되는 방법)
+Example.
 ```java
 public class SingleThreadEx2 implements Runnable{
 
@@ -117,7 +117,8 @@ public class SingleThreadEx2 implements Runnable{
 }
 ```
 
-## main에서 생성한 스레스들을 사용[*멀티 스레딩]
+### main에서 생성한 스레스들을 사용[*멀티 스레딩]
+Example.
 ```java
 public class Main {
     public static void main(String[] args) {
