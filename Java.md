@@ -181,8 +181,31 @@ Error(에러): HW의 오작동/고장으로 인해 응용프로그램에 이상�
 
 
 ### <예외처리 방법>
-1. Try Catch
+1. Try Catch (주로 사용 &추천)
+```java
+try{
+       //예외가 발생할 수 있는 코드 
+}catch(Exception e){
+      //에러시 수행
+      e.printStackTrace();//오류 출력
+}finally{
+      //예외 발생 여부에 상관없이 무조건 수행 영역
+      //이곳에 추가로 Try catch를 두기도함.
+}
+```
+=>이 구조를 TCFTC 라고 칭함.(try, catch, finally(try, catch))
+
+
+
 2. throws
+```java
+public void compileE() throws IOException{
+      //예외가 발생하는 함수에 throws 처리[즉, 예외를 던지기=떠넘기기]
+}
+```
+
+
+TIP. 예외를 떠넘기는 threow 보다는 -> 예외가 발생시, 수행할 행동을 코딩해두는 **try catch 구조가 더 좋은 코딩방법이다.**
 
 
 
